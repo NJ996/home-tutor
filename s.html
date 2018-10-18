@@ -1,0 +1,111 @@
+<?php 
+ 
+$host="localhost";
+$user="root";
+$password="";
+$db="stud";
+ 
+mysql_connect($host,$user,$password);
+mysql_select_db($db);
+  
+if(isset($_POST['username'])){
+    
+    $uname=$_POST['username'];
+    $password=$_POST['password'];
+    
+    $sql="select * from loginform where user='".$uname."'AND Pass='".$password."' limit 1";
+    
+    $result=mysql_query($sql);
+    
+    if(mysql_num_rows($result)==1){
+        echo " You Have Successfully Logged in";
+        exit();
+    }
+    else{
+        echo " You Have Entered Incorrect Password";
+        exit();
+    }
+        
+}
+?>
+ <!DOCTYPE html>
+ <html>
+ <head>
+ <link rel="stylesheet" type="text/css" href="s.css">
+ <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  </head>
+  <body>
+   <div id="container">
+ <ul>
+ <li>home</li>
+ <li>fields
+ <ul>  
+         <li>science</li>
+         <li>comerce
+		 <ul> 
+		 <li>lower-level</li>
+		 <li>average</li>
+		 <li>higher-level</li>
+		 </ul> </li>
+          <li>biology</li>	
+ </ul> </li>
+  <li>professions</li>
+  <li>login</li>
+  </ul>
+  <div class="search-box">
+  <input class="search-txt" type="text" name="" placeholder="type to search">
+  <a class="search-btn" href="#">
+  
+    
+<button style="font-size:24px">Button <i class="fa fa-automobile"></i></button>
+  
+  </a>
+  <br></br>
+  <br></br>  <br></br>
+  <br></br>
+ <h1> teachers employment</h1>
+ <p class="red">welcome here to the new platform of your achievements.your dream can be fullfill here.It emanates from your your day and endup with your dreams. </p>
+ <p> <img class="imagec1" src ="C:\Users\sumit\Downloads/sourav.jpg"></p>
+ <h2>your future is here</h2>
+ <p class="green">yr talent will not get wasted.we will furnish you the best possibility.Through this platform you can accomplished your goal.</p>
+ <p> <img class="imagec2" src ="C:\Users\sumit\Downloads/Talent.png" width="400" height="400"></p>
+ <h1>your talent</h1>
+ <ul>
+      <li> <a href="#t1">professional</a></li>
+	  <li> <a href="#t2">postgraduate</a></li>
+	  <li> <a href="#t3">undergraduate</a></li>
+	  </ul><br>
+	  	  <form action=""method="">
+		<ol><li>you like this site? </br>
+		   yes:
+		  <input type="radio"name="yes or no" value=""></br>
+		  no:
+		   <input type="radio"name="yes or no" value=""></li> </br>
+		<li> which fields you like?<br>
+		   <input type="checkbox"name="">science</br>
+		   <input type="checkbox"name="">comerce</br>
+		   <input type="checkbox"name="">medical</br></li>
+		<li>  your phone number:</br>
+		   <input type="number" min="0" max="20"></li>
+		<li>   your city:</br>
+		   <select>
+		   <option value="patna">patna</option>
+		   <option value="kerala">kerala</option>
+		   </select></li>
+		<li> DOB:</br>
+		   <input type="date" name="day"></li>
+		   
+		</ol>
+	  <label for="first name">first name:</label>
+	  <input type="text" id="first name"name=""></br></br>
+	  
+	  comments:</br>
+	  <textarea rows="10" cols="40"></textarea></br>
+	   <input type= "submit" value="submit">
+	      </form>
+	   
+ </body>
+ </html>
+  
