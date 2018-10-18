@@ -6,3 +6,20 @@
 body {
   font-family: "Segeo UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+#formal-img {
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
+  border-radius: 50%;
+  border: #9396b1 3px solid;
+}
+
+.vl {
+  border-left: 2px solid #ffffff;
+  height: 30px;
+  position: static;
+  right: 30%;
+  margin-top: 9px;
+  top: 3px;
+}
