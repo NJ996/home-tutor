@@ -1,3 +1,4 @@
+@import "footer";
 * {
   margin: 0px;
   padding: 0px;
@@ -22,4 +23,25 @@ body {
   right: 30%;
   margin-top: 9px;
   top: 3px;
+}
+
+#footer {
+  background-color: #3e4551;
+  color: #ffffff;
+}
+
+.list-unstyled li p a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#footer-last {
+  background-color: #282a2c;
+}
+
+#card {
+  border: 3px solid rgb(232, 235, 239, 0.7);
+  border-radius: 10px;
+  z-index: 6px;
+  padding: 30px;
 }
