@@ -45,3 +45,7 @@ body {
   z-index: 6px;
   padding: 30px;
 }
+#logo{
+	display:block;
+	max-height:30px;
+}
