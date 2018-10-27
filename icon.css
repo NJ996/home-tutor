@@ -15,7 +15,7 @@ display:table;
 ul li{list-style:none;
 margin:0 40px;}
 ul li a .fab{
-	font-size:20px;
+	font-size:30px;
 	color:#262626;
 	line-height:40px;
 	transition:.5s;
@@ -27,11 +27,11 @@ ul li a{
 	height:40px;
 	background:#fff;
 	text-align:center;
-	transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0,0);
+	transform: perspective(1000px) rotate( 0deg) skew(0deg) translate(0,0);
 	transition:.5s;
-	box-shadow:-20px 20px 10px rgba(0,0,0,.5);
+	box-shadow:-10px 10px 5px rgba(0,0,0,.5);
 }
-ul li a:before{
+  /* ul li a:before{  */
 	content:'';
 	position:absolute;
 	top:10px;
@@ -42,7 +42,7 @@ ul li a:before{
 	transform:rotate(0deg) skewy(-45deg);
 	transition:.5s;
 }
-ul li a:after{
+  /* ul li a:after{   */
 	content:'';
 	position:absolute;
 	bottom:-20px;
@@ -53,9 +53,10 @@ ul li a:after{
 	transform:rotate(0deg) skewx(-45deg);
 	transition:.5s;
 }
-ul li a:hover{
-	transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px,-20px);
-  	box-shadow:-50px 50px 50px rgba(0,0,0,.5);
+  
+ul li a:hover {
+	transform: perspective(1000px) rotate(-30deg) skew(15deg) translate(-40px,-20px);
+  	box-shadow:-30px 30px 30px rgba(0,0,0,.5);
 }
 ul li:hover .fab{
 	color:#fff;
