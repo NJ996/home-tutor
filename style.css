@@ -1,38 +1,30 @@
-@import "footer";
 * {
-  margin: 0px;
-  padding: 0px;
+  margin:0;
+  padding:0;
 }
 
-body {
+html,body {
   font-family: "Segeo UI", Tahoma, Geneva, Verdana, sans-serif;
+  height:100%;
+}
+#main_container{
+	min-height:100%;
 }
 
 #formal-img {
   display: block;
-  margin: auto;
-  margin-top: 2rem;
   border-radius: 50%;
-  border: #9396b1 3px solid;
+  border:3px solid #9396b1;
 }
 
-.vl {
-  border-left: 2px solid #ffffff;
-  height: 30px;
-  position: static;
-  right: 30%;
-  margin-top: 9px;
-  top: 3px;
+.container p{
+ display:block;
 }
-
 #footer {
   background-color: #3e4551;
   color: #ffffff;
-}
-
-.list-unstyled li p a:hover {
-  color: #ffffff;
-  text-decoration: none;
+  position:absolute;
+  
 }
 
 #footer-last {
@@ -40,12 +32,15 @@ body {
 }
 
 #card {
-  border: 3px solid rgb(232, 235, 239, 0.7);
-  border-radius: 10px;
-  z-index: 6px;
-  padding: 30px;
+	box-shadow:0px 10px 16px 10px rgb(0,0,0,0.5);
+	z-index: 5;
+	margin:2% 2% 2%;
 }
-#logo{
+.logo{
 	display:block;
-	max-height:30px;
+	width:100%;
+	height:auto;
+	float:left;
+	margin:auto auto auto auto;
+	padding:0px 0px 0px 0px;
 }
