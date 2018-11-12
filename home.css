@@ -1,0 +1,30 @@
+html{
+	position:relative;
+	min-height:100%;
+}
+body {
+	margin-bottom: 0;
+	font-family: "Segeo UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+#footer {
+	width:100%;
+	position:absolute;
+	bottom:0;
+	background-color: #3e4551;
+	color: #ffffff;
+}
+.list-unstyled li p a:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#footer-last {
+	background-color: #282a2c;
+}
+#logo{
+	display:block;
+	max-height:30px;
+}
+#navig{
+	background-color:#2962ff;
+}
