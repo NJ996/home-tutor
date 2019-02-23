@@ -1,14 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600');
-html{
-	height:100%;
-	position:relative;
-}
-body {
-	margin:0;
-    padding:0;
-    background-color: #007bff;
-	font-family: 'Josefin Sans', sans-serif;
-}
 .main{
   position: absolute;
   top: 50%;
