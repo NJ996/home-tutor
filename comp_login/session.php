@@ -1,7 +1,6 @@
 <?php
     session_start();
     require 'config.php';
-
     $user=$_SESSION['username'];
 
     $stmt=$conn->prepare("SELECT * FROM users WHERE username=?");

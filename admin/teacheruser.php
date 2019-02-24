@@ -30,7 +30,17 @@
     <a class="nav-link" href="logout.php">Logout</a>
   </li>
 </ul>
-<h2 class="text-center">Register User Record</h2>
+<div class="container-fluid">
+  <div class="col-md-12">
+  <div class="text-center">
+  <h2>Registered Teacher Record</h2>
+  </div>
+  <div class="text-right" style="margin-bottom:10px;">
+    <form action="teacheruser.php" method="post">
+    <button class="btn btn-success" type="submit" name="asc">Reorder</button>
+    </form>
+  </div>
+  </div>
 <?php
 $sql = "SELECT id, first_name, last_name ,guardian_name,email,date,month,year,martial_status,work_address,inst_name,subjects,specialization FROM teacherform";
 $result = $conn->query($sql);
