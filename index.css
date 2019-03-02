@@ -1,0 +1,140 @@
+body{
+    margin:0;
+    padding:0;
+    background: #007fff;
+}
+.image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.image img{
+    width: 300px;
+    height: 144px;
+    box-shadow: 0 2px 4px 2px rgba(80, 82, 85,0.5);
+    border-radius: 2%;
+    z-index: -5;
+    -webkit-animation: fadeInFromNone 2ss ease-out;
+    -moz-animation: fadeInFromNone 2s ease-out;
+    -o-animation: fadeInFromNone 2s ease-out;
+    animation: fadeInFromNone 2s ease-out;
+}
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+
+@import '../variables';
+@import '../mixins';
+@import '../functions';
+
+$size: 50px;
+
+@keyframes ball-scale-ripple-multiple {
+  0% {
+    transform: scale(0.1);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.0;
+  }
+}
+
+@mixin ball-scale-ripple-multiple ($n:3, $start:0) {
+  @for $i from $start through $n {
+    > div:nth-child(#{$i}) {
+      animation-delay: delay(0.2s, $n, $i - 1);
+    }
+  }
+}
+
+.ball-scale-ripple-multiple {
+  @include ball-scale-ripple-multiple();
+
+  position: relative;
+  transform: translateY(-$size / 2);
+
+  > div {
+    @include global-animation();
+
+    position: absolute;
+    top: -2px;
+    left: -26px;
+    width: $size;
+    height: $size;
+    border-radius: 100%;
+    border: 2px solid $primary-color;
+    animation: ball-scale-ripple-multiple 1.25s 0s infinite cubic-bezier(.21,.53,.56,.8);
+  }
+}
+

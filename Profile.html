@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Profile</title>
-    <link rel="stylesheet" type="text/css" href="navigation_and_footer.css">
-    <link rel="stylesheet" type="text/css" href="Profile.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/solid.css"
@@ -19,6 +17,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css"
         integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Profile.css">
+    <link rel="stylesheet" type="text/css" href="navigation_and_footer.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -81,29 +81,130 @@
         </div>
     </nav>
     <!--NavBar end-->
-<div class="main">
-    <div class="insidemain"><div class="row">
-        <div class="col-sm-3 col-md-6 col-lg-4"></div>
-        <div class="col-sm-3 col-md-6 col-lg-4 row" id="card">
-            <div class="col-sm-3 col-md-6 col-lg-4"></div>
-            <div class="col-sm-3 col-md-6 col-lg-4" id="insidecard">
-                <img src="img/default.png" class="profile-img"></img>
-                <h1 class="header"><b>Profile</b></h1>
-                <div class="sky-tabs sky-tabs-pos-top-justify sky-tabs-anim-flip sky-tabs-response-to-switcher">
+    <div class="main">
+        <div class="insidemain"><!--for black glass colour, no other uses-->
+           <div class="row">
+                <div class="col-sm-3 col-md-4 col-lg-4"></div>
+                <div class="col-sm-6 col-md-4 col-lg-4 row" id="card">
+                    <div class="col-sm-3 col-md-4 col-lg-4"></div>
+                    <div class="col-sm-6 col-md-4 col-lg-4" id="insidecard">
+                        <img src="img/default.png" class="profile-img"></img>
+                        <h1 class="header1"><b>Profile</b></h1>
+                        <h5 class="header2">Teacher</h5>
+                    </div>
+                    <div class="col-sm-3 col-md-4 col-lg-4"></div>
+                    <div class="container" id="tab-section">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="sky-tabs sky-tabs-pos-top-left sky-tabs-anim-slide-down sky-tabs-response-to-icons">
                     
+                                    <input type="radio" name="sky-tabs" checked id="sky-tab1" class="sky-tab-content-1" />
+                                    <label for="sky-tab1"><span><span><i class="fa fa-user-circle-o" aria-hidden="true"></i>About</span></span></label>
+                    
+                                    <input type="radio" name="sky-tabs" id="sky-tab2" class="sky-tab-content-2" />
+                                    <label for="sky-tab2"><span><span><i class="fas fa-user-graduate" aria-hidden="true"></i>Qualification</span></span></label>
+                    
+                                    <input type="radio" name="sky-tabs" id="sky-tab3" class="sky-tab-content-3" />
+                                    <label for="sky-tab3"><span><span>Experience</span></span></label>
+                    
+                                    <input type="radio" name="sky-tabs" id="sky-tab4" class="sky-tab-content-4" />
+                                    <label for="sky-tab4"><span><span>Others</span></span></label>
+                    
+                                    <ul>
+                                        <li class="sky-tab-content-1">
+                                            <div class="typography">
+                                                <table cellspacing="10px" cellpadding="10px" allign="center">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td width="1%" allign="left">BLOOD GROUP</td>
+                                                            <td width="1%" allign="center">:</td>
+                                                            <td width="4%" allign="left">O+</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="1%" allign="left">ADDRESS</td>
+                                                            <td width="1%" allign="center">:</td>
+                                                            <td width="4%" allign="left">O+</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="1%" allign="left">MOBILE NO.</td>
+                                                            <td width="1%" allign="center">:</td>
+                                                            <td width="4%" allign="left">(+91)1234567890</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="1%" allign="left">EMAIL-ID</td>
+                                                            <td width="1%" allign="center">:</td>
+                                                            <td width="4%" allign="left">xyz@gmail.com</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </li>
+                    
+                                        <li class="sky-tab-content-2">
+                                            <div class="typography">
+                                                <table cellspacing="10px" cellpadding="10px" allign="center">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td width="1%" allign="left">UG COURSE</td>
+                                                            <td width="1%" allign="center">:</td>
+                                                            <td width="4%" allign="left">O+</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="1%" allign="left">UG SPECIALIZATION</td>
+                                                            <td width="1%" allign="center">:</td>
+                                                            <td width="4%" allign="left">O+</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="1%" allign="left">PG COURSE</td>
+                                                            <td width="1%" allign="center">:</td>
+                                                            <td width="4%" allign="left">O+</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="1%" allign="left">PG SPECIALIZATION</td>
+                                                            <td width="1%" allign="center">:</td>
+                                                            <td width="4%" allign="left">O+</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </li>
+                    
+                                        <li class="sky-tab-content-3">
+                                            <div class="typography">
+                                                <table cellspacing="10px" cellpadding="10px" allign="center">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td width="2%" allign="left">TEACHING EXPERIENCE</td>
+                                                            <td width="1%" allign="center">:</td>
+                                                            <td width="4%" allign="left">O+</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </li>
+                    
+                                        <li class="sky-tab-content-4">
+                                            <div class="typography">
+                                                <h1>Isaac Newton</h1>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
+                <div class="col-sm-3 col-md-4 col-lg-4"></div>
             </div>
-            <div class="col-sm-3 col-md-6 col-lg-4"></div>
-            
         </div>
-        <div class="col-sm-3 col-md-6 col-lg-4"></div>
     </div>
-    
-
-
-         
-
-</div>
-    
+</body>
+          
+        
+            
+            
+           
+            
+       
+        
     
