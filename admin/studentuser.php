@@ -30,11 +30,31 @@
     <a class="nav-link" href="logout.php">Logout</a>
   </li>
 </ul>
-<h2 class="text-center">Register User Record</h2>
+
+<div class="container-fluid">
+  <div class="col-md-12">
+  <div class="text-center">
+  <h2>Registered Student Record</h2>
+  </div>
+  <div class="text-right" style="margin-bottom:10px;">
+    <form action="studentuser.php" method="post">
+    <button class="btn btn-success" type="submit" name="asc">Reorder</button>
+    </form>
+  </div>
+  </div>
+
 <?php
 $sql = "SELECT id, first_name, last_name , class ,present_course, address, state, city, pincode, gender FROM studentform";
 $result = $conn->query($sql);
-
+if(isset($_POST['asc']))
+{
+  $que1=" SET  @num := 0";
+  $que2="UPDATE studentform SET id = @num := (@num+1)";
+  $que3="ALTER TABLE users AUTO_INCREMENT =1";
+  $conn->query($que1);
+  $conn->query($que2);
+  $conn->query($que3);
+}
 if ($result->num_rows > 0) {
     echo "<table class='table table-dark'><tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Class</th><th>Present Course</th><th>Address</th><th>State</th><th>City</th><th>Pincode</th><th>Gender</th></tr>";
     // output data of each row

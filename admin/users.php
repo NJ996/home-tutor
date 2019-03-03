@@ -30,11 +30,32 @@
     <a class="nav-link" href="logout.php">Logout</a>
   </li>
 </ul>
-<h2 class="text-center">Register User Record</h2>
+
+<div class="container-fluid">
+  <div class="col-md-12">
+  <div class="text-center">
+  <h2>Registered User Record</h2>
+  </div>
+  <div class="text-right" style="margin-bottom:10px;">
+    <form action="users.php" method="post">
+    <button class="btn btn-success" type="submit" name="asc">Reorder</button>
+    </form>
+  </div>
+  </div>
+
 <?php
 $sql = "SELECT id, name, username ,email FROM users";
 $result = $conn->query($sql);
 
+if(isset($_POST['asc']))
+{
+  $que1=" SET  @num := 0";
+  $que2="UPDATE users SET id = @num := (@num+1)";
+  $que3="ALTER TABLE users AUTO_INCREMENT =1";
+  $conn->query($que1);
+  $conn->query($que2);
+  $conn->query($que3);
+}
 if ($result->num_rows > 0) {
     echo "<table class='table table-dark'><tr><th>ID</th><th>Name</th><th>UserName</th><th>Email</th></tr>";
     // output data of each row
@@ -46,6 +67,7 @@ if ($result->num_rows > 0) {
     echo "0 results";
 }
 ?>
+</div>
 </body>
 <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous">
